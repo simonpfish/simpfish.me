@@ -56,9 +56,12 @@ export default {
 }
 
 #text-box {
+  background-color: rgba(256, 256, 256, 0.7);
+  box-shadow: 0 0 1em 1em rgba(256, 256, 256, 0.7);
   display: inline-block;
   padding: 0rem 2rem;
   font-size: 1.1rem;
+  font-weight: 500;
   pointer-events: none;
 }
 
