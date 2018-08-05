@@ -1,5 +1,7 @@
 <template lang="pug">
 div#intro
+  particles-bg.bg   
+
   div#hello-typed
     h2 Hello, there! 
   div#hello
@@ -19,7 +21,9 @@ div#intro
 
 <script>
 import Typed from "typed.js";
+import ParticlesBg from "../components/ParticlesBg";
 export default {
+  components: { ParticlesBg },
   mounted() {
     var typed = new Typed("#hello", {
       stringsElement: "#hello-typed",
@@ -40,6 +44,10 @@ export default {
   height: 100vh;
 }
 
+#intro > * {
+  z-index: 1;
+}
+
 #picture {
   align-self: center;
   max-width: 200px;
@@ -50,6 +58,12 @@ export default {
 #text-box {
   display: inline-block;
   padding: 0rem 2rem;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+#text-box > * {
+  pointer-events: all;
 }
 
 #hello-typed {
@@ -57,10 +71,11 @@ export default {
 }
 
 #hello {
-  height: 1.5em;
+  height: 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 2rem;
+  pointer-events: none;
 }
 </style>
