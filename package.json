@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
-    "nuxt": "^1.4.2"
+    "nuxt": "^1.4.2",
+    "typed.js": "^2.0.8"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

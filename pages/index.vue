@@ -1,21 +1,35 @@
 <template lang="pug">
 div#intro
-  span#hello 
-    h2 Hello, there!
+  div#hello-typed
+    h2 Hello, there! 
+  div#hello
   img(src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12717498_1016833525037503_5767685636819260516_n.jpg?_nc_cat=0&_nc_log=1&oh=8c03dc5743b21a51b9fec6b25b2f6dfc&oe=5C118315")#picture
   div#text-box
-    p 
-      :markdown-it
-        I'm **Simon Posada Fishman**. I enjoy building things using code 👨‍💻 
-        
-        Currently finishing my Computer Science degree at [Pomona College](https://www.pomona.edu) 🎓
+    :markdown-it
+      I'm **Simon Posada Fishman**. I enjoy building things using code 👨‍💻 
+      
+      Currently finishing my Computer Science degree at [Pomona College](https://www.pomona.edu) 🎓
 
-        I'm mostly interested in *web development*, *embedded systems* and *data analysis*. 
+      I'm mostly interested in *web development*, *embedded systems* and *data analysis*. 
 
-        We are what we ~~eat~~ read. Here's a list of things I enjoy consuming 🙃:
-        
-        Radiolab, Axios Login, Stratechery, The Download
+      We are what we ~~eat~~ read. Here's a list of things I enjoy consuming 🙃:
+      
+      Radiolab, Axios Login, Stratechery, The Download
 </template>
+
+<script>
+import Typed from "typed.js";
+export default {
+  mounted() {
+    var typed = new Typed("#hello", {
+      stringsElement: "#hello-typed",
+      typeSpeed: 30,
+      showCursor: false
+    });
+  }
+};
+</script>
+
 
 <style>
 #intro {
@@ -38,7 +52,15 @@ div#intro
   padding: 0rem 2rem;
 }
 
+#hello-typed {
+  display: none;
+}
+
 #hello {
+  height: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
 }
 </style>
