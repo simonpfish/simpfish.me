@@ -5,7 +5,8 @@
 </template>
 
 <style>
-html {
+html,
+body {
   font-family: "Avenir";
   font-size: 16px;
   word-spacing: 1px;
@@ -14,5 +15,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #2c3e50;
 }
 </style>

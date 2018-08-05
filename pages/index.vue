@@ -1,9 +1,9 @@
 <template lang="pug">
 div#intro
-  div#hello 
+  span#hello 
     h2 Hello, there!
   img(src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12717498_1016833525037503_5767685636819260516_n.jpg?_nc_cat=0&_nc_log=1&oh=8c03dc5743b21a51b9fec6b25b2f6dfc&oe=5C118315")#picture
-  div#text
+  div#text-box
     p 
       :markdown-it
         I'm **Simon Posada Fishman**. I enjoy building things using code 👨‍💻 
@@ -22,25 +22,20 @@ div#intro
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   text-align: center;
-  height: 100%;
+  height: 100vh;
 }
 
 #picture {
   align-self: center;
-
-  width: 200px;
-  height: 200px;
-
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 50%;
 }
 
-#text {
+#text-box {
   display: inline-block;
-  margin: 0rem 2rem;
+  padding: 0rem 2rem;
 }
 
 #hello {
