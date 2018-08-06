@@ -1,29 +1,51 @@
 <template lang="pug">
-div#intro
+div
   particles-bg.bg   
 
-  div#hello-typed
-    h2 Hello, there! 
-  div#hello
-  img(src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12717498_1016833525037503_5767685636819260516_n.jpg?_nc_cat=0&_nc_log=1&oh=8c03dc5743b21a51b9fec6b25b2f6dfc&oe=5C118315")#picture
-  div#text-box
-    :markdown-it
-      I'm **Simon Posada Fishman**. I enjoy building things using code 👨‍💻 
-      
-      Currently finishing my Computer Science degree at [Pomona College](https://www.pomona.edu) 🎓
+  div#intro
+    div#hello-typed
+      h2 Hello, there! 
+    div#hello
+    img(src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12717498_1016833525037503_5767685636819260516_n.jpg?_nc_cat=0&_nc_log=1&oh=8c03dc5743b21a51b9fec6b25b2f6dfc&oe=5C118315")#picture
+    br
+    div#text-box
+      :markdown-it
+        I'm **Simon Posada Fishman**. I enjoy building things using code 👨‍💻 
+        
+        Computer Science 🎓Pomona College. Interning at Facebook during the summer.
+        
+        Recently I've been doing a lot of *web development* and *data analysis*.
 
-      I'm mostly interested in *web development*, *embedded systems* and *data analysis*. 
-
-      We are what we ~~eat~~ read. Here's a list of things I enjoy consuming 🙃:
+        We are what we ~~eat~~ read. Here's a list of things I enjoy consuming 🙃:
+        
+        [Radiolab](https://www.wnycstudios.org/shows/radiolab/), [Axios Login](https://www.axios.com/newsletters/axios-login), [Stratechery](https://stratechery.com/),  [The Download](https://www.technologyreview.com/the-download/)
       
-      Radiolab, Axios Login, Stratechery, The Download
+        Feel free to connect with me!
+      a(href='https://github.com/simpfish').icon-link
+        fa(:icon="['fab', 'github']")
+      a(href='https://twitter.com/simpfish').icon-link
+        fa(:icon="['fab', 'twitter']") 
+      a(href='https://www.facebook.com/spf.me').icon-link
+        fa(:icon="['fab', 'facebook']")
+
 </template>
 
 <script>
 import Typed from "typed.js";
 import ParticlesBg from "../components/ParticlesBg";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faGithub,
+  faTwitter,
+  faFacebook
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+library.add(faGithub, faTwitter, faFacebook);
+
 export default {
-  components: { ParticlesBg },
+  components: { ParticlesBg, fa: FontAwesomeIcon },
   mounted() {
     var typed = new Typed("#hello", {
       stringsElement: "#hello-typed",
@@ -36,6 +58,31 @@ export default {
 
 
 <style>
+a:link {
+  color: #aaa;
+}
+
+a:visited {
+  color: #888;
+}
+
+a:hover {
+  color: #333;
+}
+
+a:active {
+  color: #333;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.icon-link {
+  margin: 0.5em;
+  font-size: 1.3em;
+}
+
 #intro {
   display: flex;
   flex-direction: column;
@@ -80,5 +127,11 @@ export default {
   text-align: center;
   margin-bottom: 2rem;
   pointer-events: none;
+}
+
+@media only screen and (max-height: 620px) {
+  #intro {
+    justify-content: flex-start;
+  }
 }
 </style>
