@@ -6,6 +6,7 @@ div
     div#hello-typed
       h2 Hello, there! 
     div#hello
+      |
     img(src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12717498_1016833525037503_5767685636819260516_n.jpg?_nc_cat=0&_nc_log=1&oh=8c03dc5743b21a51b9fec6b25b2f6dfc&oe=5C118315")#picture
     br
     div#text-box
@@ -27,7 +28,7 @@ div
         fa(:icon="['fab', 'twitter']") 
       a(href='https://www.facebook.com/spf.me').icon-link
         fa(:icon="['fab', 'facebook']")
-
+    br
 </template>
 
 <script>
@@ -106,10 +107,11 @@ a:link {
   background-color: rgba(256, 256, 256, 0.7);
   box-shadow: 0 0 1em 1em rgba(256, 256, 256, 0.7);
   display: inline-block;
-  padding: 0rem 2rem;
+  padding: 0rem 1.5rem;
   font-size: 1.1rem;
   font-weight: 500;
   pointer-events: none;
+  margin-top: -1rem;
 }
 
 #text-box > * {
@@ -125,11 +127,17 @@ a:link {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0rem;
   pointer-events: none;
 }
 
-@media only screen and (max-height: 620px) {
+@media only screen and (max-height: 600px) {
+  #intro {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-device-height: 700px) {
   #intro {
     justify-content: flex-start;
   }
