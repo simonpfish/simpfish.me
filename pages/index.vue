@@ -11,9 +11,7 @@ div
     br
     div#text-box
       :markdown-it
-        I'm **Simon Posada Fishman**. I enjoy building things using code 👨‍💻 
-        
-        Computer Science 🎓Pomona College. Interning at Facebook during the summer.
+        I'm **Simon Posada Fishman**. I enjoy making things 👨‍💻 
         
         Recently I've been doing a lot of *web development* and *data analysis*.
 
@@ -21,6 +19,8 @@ div
         
         [Radiolab](https://www.wnycstudios.org/shows/radiolab/), [Axios Login](https://www.axios.com/newsletters/axios-login), [Stratechery](https://stratechery.com/),  [The Download](https://www.technologyreview.com/the-download/)
       
+        Computer Science at Pomona College 🎓    Currently interning at Facebook. 
+
         Feel free to connect with me!
       a(href='https://github.com/simpfish').icon-link
         fa(:icon="['fab', 'github']")
