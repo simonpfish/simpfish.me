@@ -19,7 +19,7 @@ div
         
         [Radiolab](https://www.wnycstudios.org/shows/radiolab/), [Axios Login](https://www.axios.com/newsletters/axios-login), [Stratechery](https://stratechery.com/),  [The Download](https://www.technologyreview.com/the-download/)
       
-        Computer Science at Pomona College 🎓    Currently interning at Facebook. 
+        Computer Science at Pomona College 🎓 
 
         Feel free to connect with me!
       a(href='https://github.com/simpfish').icon-link
