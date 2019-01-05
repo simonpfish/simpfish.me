@@ -7,7 +7,7 @@ div
       h2 Hello, there! 
     div#hello
       |
-    img(src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12717498_1016833525037503_5767685636819260516_n.jpg?_nc_cat=0&_nc_log=1&oh=8c03dc5743b21a51b9fec6b25b2f6dfc&oe=5C118315")#picture
+    img(src="/me.jpg")#picture
     br
     div#text-box
       :markdown-it
