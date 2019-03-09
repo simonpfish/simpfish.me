@@ -15,7 +15,7 @@ div
         
         Recently I've been doing a lot of *web development* and *data analysis*.
 
-        We are what we ~~eat~~ read. Here's a list of things I enjoy consuming 🙃:
+        Here's a quick list of sites I enjoy:
         
         [Radiolab](https://www.wnycstudios.org/shows/radiolab/), [Axios Login](https://www.axios.com/newsletters/axios-login), [Stratechery](https://stratechery.com/),  [The Download](https://www.technologyreview.com/the-download/)
       
